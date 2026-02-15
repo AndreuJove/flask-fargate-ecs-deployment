@@ -18,3 +18,10 @@ def test_valentines_endpoint(client):
     data = response.get_json()
     assert response.status_code == 200
     assert data["message"] == "Happy Valentine's Day"
+
+def test_valentines_version_endpoint(client):
+    response = client.get('/test')
+    data = response.get_json()
+
+    assert response.status_code == 200
+    assert data["message"] == "test version 3.0.0"
