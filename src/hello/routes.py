@@ -13,3 +13,8 @@ def index():
 def hello():
     return "Hello, World", 200
 
+@hello_routes.route("/valentines", methods=['GET'])
+def valentines():
+    return {
+        "message": "Happy Valentine's Day"
+    }, 200
